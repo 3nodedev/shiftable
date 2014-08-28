@@ -19,3 +19,7 @@
 #password, #employee_number{
     display: inline;
 }
+
+.pure-menu a{
+    color: #A72433;
+}
