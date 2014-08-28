@@ -3,7 +3,7 @@ class CreateStores < ActiveRecord::Migration
     create_table :stores do |t|
       t.string :store_name
       t.string :store_label
-      t.datestamp
+      t.timestamps
     end
   end
 end
