@@ -1,9 +1,10 @@
 class CreateShifts < ActiveRecord::Migration
   def change
     create_table :shifts do |t|
-      t.string :start_time
-      t.string :duration
-      t.string :date
+      t.belongs_to :employee
+      t.belongs_to :store
+      t.datetime :start_time
+      t.integer :duration
       t.timestamps
     end
   end
