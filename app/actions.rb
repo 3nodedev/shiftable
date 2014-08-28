@@ -1,3 +1,9 @@
+helpers do
+  def logged_in?
+    session[:employee_number].present?
+  end
+  @login_error = false
+end
 enable :sessions
 
 get '/' do
@@ -14,13 +20,20 @@ get '/employee/:id' do
 end
 
 get '/login' do
+  @employee = Employee.new
   erb :'login/index'
 end
 
 post '/login' do
-  # @employee = Employee.find_by(employee_id: params[:employee_id], password: params[:password])
-  # employee_sessions
-  redirect '/employees'
+  if Employee.where(:employee_number => params['employee_number']).pluck(:password)[0] == params['password']
+    id = Employee.where(:employee_number => params['employee_number']).pluck(:id)[0]
+    session[:employee_number] = params[:employee_number]
+    @login_error = false
+    redirect '/employees'
+  else
+    @login_error = true
+    erb :'/login/index'
+  end
 end
 
 post '/logout' do
