@@ -13,9 +13,14 @@ get '/employee/:id' do
   erb :'employee/show'
 end
 
+get '/login' do
+  erb :'login/index'
+end
+
 post '/login' do
-  @employee = Employee.find_by(employee_id: params[:employee_id], password: params[:password])
-  employee_sessions
+  # @employee = Employee.find_by(employee_id: params[:employee_id], password: params[:password])
+  # employee_sessions
+  redirect '/employees'
 end
 
 post '/logout' do
