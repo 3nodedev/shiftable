@@ -4,7 +4,7 @@ class CreateShifts < ActiveRecord::Migration
       t.string :start_time
       t.string :duration
       t.string :date
-      t.datestamp
+      t.timestamps
     end
   end
 end

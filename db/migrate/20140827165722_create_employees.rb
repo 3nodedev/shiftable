@@ -8,7 +8,7 @@ class CreateEmployees < ActiveRecord::Migration
       t.string :address
       t.string :role
       t.string :password
-      t.datestamp
+      t.timestamps
     end
   end
 end
