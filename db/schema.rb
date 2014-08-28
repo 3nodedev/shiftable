@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 20140827170150) do
 
   create_table "employees", force: true do |t|
-    t.string   "employee_id"
+    t.string   "employee_number"
     t.string   "first_name"
     t.string   "last_name"
     t.string   "phone"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20140827170150) do
     t.string   "password"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "store_id"
   end
 
   create_table "shifts", force: true do |t|
