@@ -37,3 +37,11 @@ end
 
 post '/employees/' do
 end
+
+get '/management' do
+  erb :'management/index'
+end
+
+get '/management/scheduling' do
+  erb :'management/scheduling'
+end
