@@ -15,4 +15,7 @@ group :development, :test do
   gem 'pry'
   gem 'shotgun'
   gem 'sqlite3'
+  gem 'faker'
+  gem 'awesome_print'
+  gem 'populator'
 end

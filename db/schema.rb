@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20140827170150) do
     t.string   "password"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "store_id"
   end
 
   create_table "shifts", force: true do |t|

@@ -9,6 +9,7 @@ class CreateEmployees < ActiveRecord::Migration
       t.string :role
       t.string :password
       t.timestamps
+      t.belongs_to :store
     end
   end
 end
