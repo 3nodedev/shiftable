@@ -6,14 +6,18 @@
     </ul>
 </div>
 
+<% if @login_error %>
+  <div>
+    <strong>Wrong username or password</strong>
+  </div>
+<% end %>
+
 <div class="splash-container">
 <div class="splash">
 <form class="pure-form pure-form-stacked" action="/login" method="POST">
     <fieldset>
-        <input id="employee_number" type="text" placeholder="Employee number">
-
-        <input id="password" type="password" placeholder="Password">
-
+      <input name="employee_number" type="text" placeholder="Employee number" value="<%= @employee.employee_number %>">
+        <input name="password" type="password" value="<%= @employee.password %>" placeholder="Password">
         <label for="remember" class="pure-checkbox">
             <input id="remember" type="checkbox"> Remember me
         </label>
