@@ -1,18 +1,47 @@
-<div class="pure-menu pure-menu-open pure-menu-horizontal">
-  <a href="#" class="pure-menu-heading">Site Title</a>
+<link rel="stylesheet" href="/stylesheets/marketing.css">  
+<link rel="stylesheet" href="/stylesheets/switch.css">  
 
-  <ul>
-    <li class="pure-menu-selected"><a href="#">Home</a></li>
-    <li><a href="#">About us</a></li>
-    <li><a href="#">Why Shiftable?</a></li>
-    <li><a href="#">Contact Us</a></li>
-  </ul>
+<div class="header">
+  <div class="pure-menu pure-menu-open pure-menu-horizontal">
+    <a href="#" class="pure-menu-heading">Site Title</a>
+
+    <ul>
+      <li class="pure-menu-selected"><a href="#">Home</a></li>
+      <li><a href="#">About us</a></li>
+      <li><a href="#">Why Shiftable?</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </div>
 </div>
-<p> Welcome <%= session[:employee_number] %></p>
-<p>
+<!-- <p> Welcome <%= session[:employee_number] %></p> -->
+
+<div class="pure-g">
+  <div class="pure-u-4-5">
+    <h2 class="is-center">Employee Calendar</h2>
+    <p class="is-center">
+      <img src="http://placehold.it/900x600" alt="" />
+    </p>
+  </div>
+  <div class="pure-u-1-5">
+    <h3 class="is-center">Menu</h3>
+    <div class="container">
+      <label class="switch">
+        
+        <input type="checkbox" class="switch-input">
+        <span class="switch-label" data-on="On" data-off="Off"></span>
+        <span class="switch-handle"></span>
+      </label>
+
+      <label class="switch">
+        <input type="checkbox" class="switch-input" checked>
+        <span class="switch-label" data-on="On" data-off="Off"></span>
+        <span class="switch-handle"></span>
+      </label>
+    </div>
+  </div>
+</div>
+
 <form action="/logout" method="post">
   <input type="submit" value="logout"/>
 </form>
-</p>
-
 
