@@ -63,3 +63,7 @@ end
 get '/management/scheduling' do
   erb :'management/scheduling'
 end
+
+get '/video' do
+  erb :'video/index'
+end
