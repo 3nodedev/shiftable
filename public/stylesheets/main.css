@@ -34,11 +34,11 @@
 }
 
 video#bgvid {
-position: fixed; right: 0; bottom: 0;
-min-width: 100%; min-height: 100%;
-width: auto; height: auto; z-index: -100;
-background: url(Miniature-Vancouver.jpg) no-repeat;
-background-size: cover;
+    position: fixed; right: 0; bottom: 0;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto; z-index: -100;
+    background: url(Miniature-Vancouver.jpg) no-repeat;
+    background-size: cover;
 }
 
 .splash-head-text{
@@ -54,3 +54,36 @@ background-size: cover;
 .pure-g{
     display: inline-block;
 }
+
+.pure-form{
+    display: inline-block;
+    position: relative;
+    margin-top: -4.5em;
+}
+
+.pure-checkbox{
+    display: block;
+}
+
+/*#remember{
+    display: block;
+}*/
+
+.login-form{
+    border: 0 none black;
+  /*  width: ;*/
+}
+
+/*.login-form label {
+    margin: 1em 0 0;
+    font-weight: bold;
+    font-size: 100%;
+}
+
+.login-form input[type] {
+    border: 2px solid #ddd;
+    box-shadow: none;
+    font-size: 50%;
+    width: 80%;
+    margin-bottom: 1em;
+}*/

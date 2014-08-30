@@ -1,10 +1,19 @@
-<div class="pure-menu pure-menu-open pure-menu-horizontal">
-    <a href="#" class="pure-menu-heading">SHIFTABLE</a>
+<div class="header">
+    <div class="home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
+        <a class="pure-menu-heading" href=""><img src="photos/shiftlogowhite.png" style='width:40%;' border="0" alt="Null"></a>
 
-    <ul>
-        <li class="pure-menu-selected"><a href="#">Home</a></li>
-    </ul>
+        <ul>
+            <li class="pure-menu-selected"><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Why Shiftable?</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </div>
 </div>
+
+<video autoplay loop poster="Miniature-Vancouver.jpg" id="bgvid">
+    <source src="video/Miniature-Vancouver2.webm" type="video/mp4">
+</video>
 
 <% if @login_error %>
   <div>
@@ -13,8 +22,9 @@
 <% end %>
 
 <div class="splash-container">
-<div class="splash">
-<form class="pure-form pure-form-stacked" action="/login" method="POST">
+    <div class="splash">
+      <div class="splash-head">
+        <form class="login-form pure-form-stacked" action="/login" method="POST">
     <fieldset>
       <input name="employee_number" type="text" placeholder="Employee number" value="<%= @employee.employee_number %>">
         <input name="password" type="password" value="<%= @employee.password %>" placeholder="Password">
@@ -25,7 +35,8 @@
         <button type="submit" class="pure-button pure-button-primary">Sign in</button>
     </fieldset>
 </form>
-</div>
+        </div>
+    </div>
 </div>
 
 
