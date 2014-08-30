@@ -58,26 +58,26 @@ task "db:populate" do
 
   (from_date..to_date).each do |date|
     Shift.populate 2 do |shift|
-      shift.start_time = from_date
-      shift.duration = 300
+      shift.start_date = from_date
+      shift.end_date = from_date + Rational(5, 24)
       shift.employee_id = 1..15
       shift.store_id = 1
     end
     Shift.populate 2 do |shift|
-      shift.start_time = from_date + Rational(5, 24)
-      shift.duration = 300
+      shift.start_date = from_date + Rational(5, 24)
+      shift.end_date = from_date + Rational(10, 24)
       shift.employee_id = 1..15
       shift.store_id = 1
     end
     Shift.populate 2 do |shift|
-      shift.start_time = from_date + Rational(10, 24)
-      shift.duration = 300
+      shift.start_date = from_date + Rational(10, 24)
+      shift.end_date = from_date + Rational(15, 24)
       shift.employee_id = 1..15
       shift.store_id = 1
     end
     Shift.populate 1 do |shift|
-      shift.start_time = from_date + Rational(2, 24)
-      shift.duration = 540
+      shift.start_date = from_date + Rational(2, 24)
+      shift.end_date = from_date + Rational(11, 24)
       shift.employee_id = 16..20
       shift.store_id = 1
     end
