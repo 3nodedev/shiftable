@@ -1,3 +1,4 @@
+require 'active_model_serializers'
 class Shift < ActiveRecord::Base
 
   belongs_to :store
@@ -7,3 +8,14 @@ class Shift < ActiveRecord::Base
 
 end
 
+ActiveSupport.use_standard_json_time_format = false
+
+class ActiveSupport::TimeWithZone
+  def as_json(options = {})
+    # strftime('%Y-%m-%d %H:%M:%S')
+  end
+end
+
+class ShiftSerializer < ActiveModel::Serializer
+  attributes :id, :start_date, :end_date, :updated_at, :store_id, :employee_id, :created_at
+end

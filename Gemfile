@@ -10,6 +10,8 @@ gem 'sinatra-activerecord'
 
 gem 'puma'
 gem 'tux'
+gem 'json'
+gem 'active_model_serializers'
 
 group :development, :test do
   gem 'pry'
