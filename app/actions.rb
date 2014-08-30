@@ -12,7 +12,8 @@ end
 
 get '/employees' do
   @shift_data = Shift.all
-  @shift_cal = @shift_data.as_json
+  @shift_data_json = @shift_data.to_json
+  @shift_cal = @shift_data_json.gsub(/\"/, '\'')
   # binding.pry
   erb :'employees/index'
 end
