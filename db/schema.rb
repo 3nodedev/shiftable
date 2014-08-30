@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140827170150) do
+ActiveRecord::Schema.define(version: 20140830072045) do
 
   create_table "employees", force: true do |t|
     t.string   "employee_number"
@@ -28,10 +28,10 @@ ActiveRecord::Schema.define(version: 20140827170150) do
   create_table "shifts", force: true do |t|
     t.integer  "employee_id"
     t.integer  "store_id"
-    t.datetime "start_time"
-    t.integer  "duration"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "start_date"
+    t.datetime "end_date"
   end
 
   create_table "stores", force: true do |t|

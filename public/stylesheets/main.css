@@ -1,7 +1,6 @@
 .splash-container{
     width: 100%;
     height: 100%;
-    /*background-image: url("../photos/vancouver.jpeg");*/
     background-repeat: none;
     background-size: cover;
     top: 0;
@@ -23,5 +22,35 @@
 }
 
 .pure-menu a{
-    color: #A72433;
+    color: #BCD7F6;
+}
+
+#scheduler_here{
+
+}
+
+.schedule_style{
+    background-color: red;
+}
+
+video#bgvid {
+position: fixed; right: 0; bottom: 0;
+min-width: 100%; min-height: 100%;
+width: auto; height: auto; z-index: -100;
+background: url(Miniature-Vancouver.jpg) no-repeat;
+background-size: cover;
+}
+
+.splash-head-text{
+    margin-top: -2em;
+}
+
+#shiftlogo{
+    top:1.75em;
+    position: relative;
+    margin: 0 auto;
+}
+
+.pure-g{
+    display: inline-block;
 }

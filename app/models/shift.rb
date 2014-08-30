@@ -7,3 +7,11 @@ class Shift < ActiveRecord::Base
 
 end
 
+ActiveSupport.use_standard_json_time_format = false
+
+class ActiveSupport::TimeWithZone
+  def as_json(options = {})
+    # strftime('%Y-%m-%d %H:%M:%S')
+  end
+end
+
