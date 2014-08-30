@@ -70,8 +70,8 @@ video#bgvid {
 }*/
 
 .login-form{
-    border: 0 none black;
-  /*  width: ;*/
+
+    width: ;
 }
 
 /*.login-form label {
@@ -87,3 +87,20 @@ video#bgvid {
     width: 80%;
     margin-bottom: 1em;
 }*/
+.starbucks-menu.pure-menu-open {
+    background: #006341;
+}
+
+.employee-style{
+    background-color: #F7F7F7;
+}
+
+#scheduler_here{
+    background-color: #EEE8DA;
+}
+
+.dhx_cal_data{
+    background-color: #EEE8DA;
+}
+
+
