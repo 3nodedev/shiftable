@@ -23,7 +23,7 @@
 }
 
 .pure-menu a{
-    color: #A72433;
+    color: #FB2C3C;
 }
 
 #scheduler_here{
@@ -40,6 +40,16 @@ min-width: 100%; min-height: 100%;
 width: auto; height: auto; z-index: -100;
 background: url(Miniature-Vancouver.jpg) no-repeat;
 background-size: cover;
+}
+
+.splash-head-text{
+    margin-top: -2em;
+}
+
+#shiftlogo{
+    top:1.75em;
+    position: relative;
+    margin: 0 auto;
 }
 
 
