@@ -13,7 +13,7 @@ end
 get '/employees' do
   @shift_data = Shift.all
   @shift_cal = @shift_data.to_json
-  binding.pry
+  # binding.pry
   erb :'employees/index'
 end
 
