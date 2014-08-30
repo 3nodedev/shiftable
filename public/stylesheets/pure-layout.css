@@ -115,10 +115,18 @@ a.pure-button-primary {
     color: white;
 }
 
+.home-menu .pure-menu-selected a:hover {
+    color: #AECFE5;
+}
+
 .home-menu a {
     color: #6FBEF3;
 }
-.home-menu li a:hover,
+.home-menu li a:hover{
+    background: none;
+    border: none;
+    color: white;
+}
 .home-menu li a:focus {
     background: none;
     border: none;

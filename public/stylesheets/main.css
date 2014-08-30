@@ -1,7 +1,6 @@
 .splash-container{
     width: 100%;
     height: 100%;
-    /*background-image: url("../photos/vancouver.jpeg");*/
     background-repeat: none;
     background-size: cover;
     top: 0;
@@ -23,7 +22,7 @@
 }
 
 .pure-menu a{
-    color: #FB2C3C;
+    color: #BCD7F6;
 }
 
 #scheduler_here{
@@ -52,4 +51,6 @@ background-size: cover;
     margin: 0 auto;
 }
 
-
+.pure-g{
+    display: inline-block;
+}
