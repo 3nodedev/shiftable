@@ -11,18 +11,17 @@
   </div>
 </div>
 
-<script type="text/javascript" charset="utf-8">
-  function init() {
-    scheduler.config.xml_date="%Y-%m-%d %H:%i";
-    scheduler.config.date_step = "5"
-    scheduler.config.details_on_create = true;
-    scheduler.config.details_on_dblclick = true;
-    scheduler.init('scheduler_here',"","month");
-    // scheduler.load("./xml/events.xml");
-    }
-</script>
+// <script type="text/javascript" charset="utf-8">
+//   function init() {
+//     scheduler.config.xml_date="%Y-%m-%d %H:%i";
+//     scheduler.config.date_step = "5"
+//     scheduler.config.details_on_create = true;
+//     scheduler.config.details_on_dblclick = true;
+//     scheduler.init('scheduler_here',"","month");
+//     scheduler.load("./xml/events.xml");
+//     }
+// </script>
 
-<body onload="init();showNotification()">
 <style type="text/css" media="screen">
     html, body{
         /* margin:0px; */
@@ -32,6 +31,7 @@
     }
 </style>
 
+<body onload="init();showNotification()">
   <div id="scheduler_here" class="dhx_cal_container" style='width:80%; height:80%;'>
       <div class="dhx_cal_navline">
           <div class="dhx_cal_prev_button">&nbsp;</div>
@@ -45,5 +45,15 @@
       <div class="dhx_cal_header"></div>
       <div class="dhx_cal_data"></div>
   </div>
+<script type="text/javascript" charset="utf-8">
+   scheduler.init('scheduler_here', new Date(), "month");
+   var events = [
+{id:1, text:"Meeting",   start_date:"08/29/2014 14:00",end_date:"08/29/2014 17:00"},
+{id:2, text:"Conference",start_date:"08/29/2014 12:00",end_date:"08/29/2014 19:00"},
+{id:3, text:"Interview", start_date:"08/29/2014 09:00",end_date:"08/29/2014 10:00"}
+];
+    scheduler.parse("events", "json");//takes the name and format of the data source
+
+</script>
   </body>
   
