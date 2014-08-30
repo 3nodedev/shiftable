@@ -35,17 +35,17 @@
       <div class="dhx_cal_data"></div>
   </div>
 <script type="text/javascript" charset="utf-8">
-  scheduler.config.xml_date="%Y-%m-%d %H:%i:%s";
+  scheduler.config.xml_date="%Y/%m/%d %H:%i:%s";
   // scheduler.config.server_utc = true;
   scheduler.init('scheduler_here', new Date(), "month");
-  var test = <% @shift_cal %>
+  var test = @shit
    var events = [
 {id:1, text:"Meeting",   start_date:"2014/08/28 06:00:00 +0000",end_date:"2014/08/28 09:00:00 +0000"},
 {id:2, text:"Conference",start_date:"2014-08-28 11:00:00",end_date:"2014-08-28 16:00:00"},
 {id:3, text:"Interview", start_date:"2014-08-28 16:00:00",end_date:"2014-08-28 19:00:00"},
 {end_date:"2014-08-29 11:00:00 UTC", id:4, start_date:"2014-08-29 06:00:00 UTC", text: "it worked"},
 ];
-scheduler.parse("test", "json");//takes the name and format of the data source
+scheduler.parse("@shit", "json");//takes the name and format of the data source
 </script>
   </body>
   
