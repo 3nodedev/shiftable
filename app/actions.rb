@@ -32,6 +32,7 @@ post '/login' do
   if Employee.where(:employee_number => params['employee_number']).pluck(:password)[0] == params['password']
     id = Employee.where(:employee_number => params['employee_number']).pluck(:id)[0]
     session[:employee_number] = params[:employee_number]
+    session[:employee_id] = id
     @login_error = false
     redirect '/employees'
   else
@@ -61,7 +62,7 @@ post '/employees/' do
 end
 
 get '/management' do
-  @shift_data = Shift.all
+  @shift_data = Shift.where(employee_id: session[:employee_id])
   @shift_data_json = @shift_data.to_json
   @shift_cal = @shift_data_json.gsub(/\"/, '\'')
   # binding.pry
