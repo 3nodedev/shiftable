@@ -109,6 +109,7 @@ a.pure-button-primary {
     color: white;
     font-weight: 400;
     font-size: 120%;
+    max-width: 100%;
 }
 
 .home-menu .pure-menu-selected a {
