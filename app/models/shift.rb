@@ -14,7 +14,6 @@ class Shift < ActiveRecord::Base
       :color => calendar_color,
       # :text => "it worked",
     }
-    # strftime('%Y-%m-%d %H:%M:%S')
   end
 
   def calendar_color
