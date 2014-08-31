@@ -11,7 +11,7 @@ get '/' do
 end
 
 get '/employees' do
-  @shift_data = Shift.all
+  @shift_data = Shift.where(employee_id: [session[:employee_id], nil])
   @shift_data_json = @shift_data.to_json
   @shift_cal = @shift_data_json.gsub(/\"/, '\'')
   # binding.pry
@@ -46,31 +46,32 @@ post '/logout' do
   redirect '/'
 end
 
-post '/shifts/new' do
-  #create shifts (mgmt only)
+get '/employees/shiftable' do
+  @my_shifts = Shift.where(employee_id: session[:employee_id])
+  @shifts_avail = Shift.where(employee_id: nil)
+  erb :'/shiftable/index'
 end
 
-post '/shifts/view' do
-  #view schedule
+post '/dropshift' do
+  dropshift = Shift.find params[:shift_id]
+  dropshift.employee_id = nil
+  dropshift.save
+  redirect '/employees/shiftable'
 end
 
-post '/shifts/append' do
-  #update schedule
-end
-
-post '/employees/' do
+post '/grabshift' do
+  grabshift = Shift.find params[:shift_id]
+  grabshift.employee_id = session[:employee_id]
+  grabshift.save
+  redirect '/employees/shiftable'
 end
 
 get '/management' do
-  @shift_data = Shift.where(employee_id: session[:employee_id])
+  @shift_data = Shift.all
   @shift_data_json = @shift_data.to_json
   @shift_cal = @shift_data_json.gsub(/\"/, '\'')
   # binding.pry
   erb :'management/index'
-end
-
-get '/management/scheduling' do
-  erb :'management/scheduling'
 end
 
 get '/video' do
