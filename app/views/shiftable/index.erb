@@ -1,0 +1,28 @@
+<div class="pure-g">
+  <div class="pure-u-1-2">
+    <h5>My Shifts</h5>
+    <% @my_shifts.each do |shift| %>
+      <div>
+        <p><%= shift.start_date %></p>
+      </div>
+      <div>
+        <form action="/dropshift" method="post">
+          <input type="hidden" name="shift_id" value="<%= shift.id %>" />
+          <input class="pure-button" type="submit" name="submit" value="Drop Shift" />
+        </form>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="pure-u-1-2">
+    <h5>Available Shifts</h5>
+    <% @shifts_avail.each do |shift| %>
+      <div>
+      <p><%= shift.start_date %></p>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+  

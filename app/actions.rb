@@ -46,16 +46,14 @@ post '/logout' do
   redirect '/'
 end
 
-post '/shifts/new' do
-  #create shifts (mgmt only)
+get '/employees/shiftable' do
+  @my_shifts = Shift.where(employee_id: session[:employee_id])
+  @shifts_avail = Shift.where(employee_id: nil)
+  erb :'/shiftable/index'
 end
 
-post '/shifts/view' do
-  #view schedule
-end
-
-post '/shifts/append' do
-  #update schedule
+post '/dropshift' do
+  redirect '/employees/shiftable'
 end
 
 post '/employees/' do

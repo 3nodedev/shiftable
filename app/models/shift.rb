@@ -4,7 +4,7 @@ class Shift < ActiveRecord::Base
   belongs_to :store
   belongs_to :employee
 
-  validates_presence_of :employee_id, :store_id
+  validates_presence_of :store_id
   def as_json(options = {})
     { :id => self.id, 
       :start_date => self.start_date.to_s,
