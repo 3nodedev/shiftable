@@ -9,7 +9,8 @@ class Shift < ActiveRecord::Base
     { :id => self.id, 
       :start_date => self.start_date.to_s,
       :end_date => self.end_date.to_s,
-      :text => "it worked",
+      :text => self.employee.first_name,
+      # :text => "it worked",
     }
     # strftime('%Y-%m-%d %H:%M:%S')
   end
