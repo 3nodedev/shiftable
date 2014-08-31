@@ -65,28 +65,16 @@ video#bgvid {
     display: block;
 }
 
-/*#remember{
-    display: block;
-}*/
-
 .login-form{
 
-    width: ;
 }
 
-/*.login-form label {
+.login-form label {
     margin: 1em 0 0;
     font-weight: bold;
-    font-size: 100%;
+    font-size: 80%;
 }
 
-.login-form input[type] {
-    border: 2px solid #ddd;
-    box-shadow: none;
-    font-size: 50%;
-    width: 80%;
-    margin-bottom: 1em;
-}*/
 .starbucks-menu.pure-menu-open {
     background: #006341;
 }
@@ -103,4 +91,11 @@ video#bgvid {
     background-color: #EEE8DA;s
 }
 
+.login{
+    border:none;
+    font-size: 40%;
+    line-height: 0em;
+    display: inline-block;
+    margin-top: 7em;
+}
 
