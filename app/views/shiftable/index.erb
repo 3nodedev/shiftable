@@ -3,7 +3,10 @@
     <h5>My Shifts</h5>
     <% @my_shifts.each do |shift| %>
       <div>
-        <p><%= shift.start_date %></p>
+        <p><%= shift.start_date.strftime("%a, %b %d at %I:%M%p") %>
+        to
+        <%= shift.end_date.strftime("%I:%M%p") %>
+        </p>
       </div>
       <div>
         <form action="/dropshift" method="post">
@@ -18,7 +21,10 @@
     <h5>Available Shifts</h5>
     <% @shifts_avail.each do |shift| %>
       <div>
-      <p><%= shift.start_date %></p>
+      <p><%= shift.start_date.strftime("%a, %b %d at %I:%M%p") %>
+        to
+        <%= shift.end_date.strftime("%I:%M%p") %>
+      </p>
       </div>
       <div>
         <form action="/grabshift" method="post">
