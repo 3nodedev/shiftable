@@ -10,10 +10,19 @@ class Shift < ActiveRecord::Base
       :start_date => self.start_date.to_s,
       :end_date => self.end_date.to_s,
       :text => self.employee.first_name,
-      :store => self.store.store_label
+      :event_text => self.store.store_label,
+      :color => calendar_color,
       # :text => "it worked",
     }
     # strftime('%Y-%m-%d %H:%M:%S')
+  end
+
+  def calendar_color
+    if self.employee.role == "barista"
+      @color = "red"
+    else
+      @color = "orange"
+    end
   end
 
 end
