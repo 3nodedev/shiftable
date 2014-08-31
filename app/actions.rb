@@ -70,7 +70,7 @@ post '/employees/' do
 end
 
 get '/management' do
-  @shift_data = Shift.where(employee_id: session[:employee_id])
+  @shift_data = Shift.where(employee_id: [session[:employee_id], nil])
   @shift_data_json = @shift_data.to_json
   @shift_cal = @shift_data_json.gsub(/\"/, '\'')
   # binding.pry
