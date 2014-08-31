@@ -21,6 +21,21 @@ task "db:version" do
   puts "Current version: #{ActiveRecord::Migrator.current_version}"
 end
 
+# task "db:populate_availabe" do
+#   require 'faker'
+#   person = Employee.new
+#   person.employee_number = "available"
+#   person.first_name = Faker::Name.first_name
+#   person.last_name = Faker::Name.last_name
+#   person.phone = Faker::PhoneNumber.phone_number
+#   person.role = "barista"
+#   person.password = "password"
+#   person.address = Faker::Address.street_address
+#   person.store_id = 1
+#   person.save
+#
+# end
+
 desc "populate database"
 task "db:populate" do
   require 'populator'
