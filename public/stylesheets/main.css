@@ -184,7 +184,6 @@ video#bgvid {
 
 .calendar-menu.pure-menu.pure-menu-open{
     width: 11.9em;
-    float: right;
     clear: left;
     display: inline-block;
 }
