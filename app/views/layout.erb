@@ -30,28 +30,11 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/javascript/application.js"></script>
 
-  <script type="text/javascript" charset="utf-8">
-  function init() {
-    
-    scheduler.config.xml_date="%Y-%m-%d %H:%i";
-    scheduler.config.date_step = "5"
-    scheduler.config.details_on_create = true;
-    scheduler.config.details_on_dblclick = true;
-    scheduler.init('scheduler_here',"","month");
-    scheduler.load("./xml/events.xml");
-    
-  }
-
-    /*this function is used to show notification to PC users and has no connection to scheduler itself*/
-    function showNotification(){
-        if (navigator.userAgent.match(/iPad/i) == null)
-            document.getElementById("notification").style.display="";
-    }
-</script>
-
   <title></title>
 </head>
-<body onload="init();showNotification()">
+
+<body>
   <%= yield %>
 </body>
+
 </html>

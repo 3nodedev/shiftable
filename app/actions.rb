@@ -64,7 +64,7 @@ get '/management' do
   @shift_data = Shift.all
   @shift_data_json = @shift_data.to_json
   @shift_cal = @shift_data_json.gsub(/\"/, '\'')
-  binding.pry
+  # binding.pry
   erb :'management/index'
 end
 
