@@ -106,7 +106,8 @@ video#bgvid {
 
 #scheduler_here{
     background-color: #EEE8DA;
-    margin-left: -17.9em;
+    display: inline-block;
+    float: left;
 }
 
 .dhx_cal_header.dhx_cal_data{
@@ -178,11 +179,14 @@ video#bgvid {
 .toggle-menu.pure-menu.pure-menu-open{
     float: right;
     clear: both;
+    display: inline-block;
 }
 
 .calendar-menu.pure-menu.pure-menu-open{
     width: 11.9em;
     float: right;
+    clear: left;
+    display: inline-block;
 }
 
 #myonoffswitch{
