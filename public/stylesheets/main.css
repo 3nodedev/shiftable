@@ -161,6 +161,6 @@ video#bgvid {
     right: 0px; 
 }
 
-.pure-menu.pure-menu-open{
-    float: left;
+.toggle-menu.pure-menu.pure-menu-open{
+    float: right;
 }

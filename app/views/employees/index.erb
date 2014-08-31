@@ -13,7 +13,7 @@
 <div class="employee-style">
 
   <body onload="init();showNotification()">
-    <div id="scheduler_here" class="dhx_cal_container" style='width:85%; height:600px; padding:3%;'>
+    <div id="scheduler_here" class="dhx_cal_container" style='width:85%; height:600px; padding:3%; position:fixed;'>
         <div class="dhx_cal_navline">
             <div class="dhx_cal_prev_button">&nbsp;</div>
             <div class="dhx_cal_next_button">&nbsp;</div>
@@ -40,7 +40,7 @@
     ];
     scheduler.parse("events", "json");//takes the name and format of the data source
     </script>
-<div class="pure-menu pure-menu-open">
+<div class="toggle-menu pure-menu pure-menu-open">
 <div class="onoffswitch">
     <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
     <label class="onoffswitch-label" for="myonoffswitch">
