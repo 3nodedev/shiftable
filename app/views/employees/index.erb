@@ -1,44 +1,78 @@
-<div class="header">
-  <div class="starbucks-menu pure-menu pure-menu-open pure-menu-horizontal">
-    <a href="#" class="pure-menu-heading">Site Title</a>
-
-    <ul>
-      <li class="pure-menu-selected"><a href="#">Profile</a></li>
-      <li><a href="#">About us</a></li>
-      <li><a href="#">Why Shiftable?</a></li>
-      <li><a href="#">Contact Us</a></li>
-    </ul>
-  </div>
+<div class="header">   
+    <div class="home-menu starbucks-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-heading">
+            <img src="photos/Starbucks_logo.png" style='width:2.5%;' border="0" alt="Null">
+            <ul>
+                <li class="pure-menu-selected"><a href="#">Profile</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Why Shiftable?</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+    </div>
 </div>
+
 <div class="employee-style">
 
-<body onload="init();showNotification()">
-  <div id="scheduler_here" class="dhx_cal_container" style='width:900px; height:600px; padding:10px;'>
-      <div class="dhx_cal_navline">
-          <div class="dhx_cal_prev_button">&nbsp;</div>
-          <div class="dhx_cal_next_button">&nbsp;</div>
-          <div class="dhx_cal_today_button"></div>
-          <div class="dhx_cal_date"></div>
-          <div class="dhx_cal_tab" name="day_tab" style="right:204px;"></div>
-          <div class="dhx_cal_tab" name="week_tab" style="right:140px;"></div>
-          <div class="dhx_cal_tab" name="month_tab" style="right:76px;"></div>
-      </div>
-      <div class="dhx_cal_header"></div>
-      <div class="dhx_cal_data"></div>
-  </div>
-<script type="text/javascript" charset="utf-8">
-  scheduler.config.xml_date="%Y-%m-%d %H:%i:%s";
-  // scheduler.config.server_utc = true;
-  scheduler.init('scheduler_here', new Date(), "month");
-   var events = [
-{id:1, text:"Meeting",   start_date:"2014-08-28 06:00:00 +0000",end_date:"2014/08/28 09:00:00 +0000"},
-{id:2, text:"Conference",start_date:"2014-08-28 11:00:00",end_date:"2014-08-28 16:00:00"},
-{id:3, text:"Interview", start_date:"2014-08-28 16:00:00",end_date:"2014-08-28 19:00:00"},
-{id:4, text:"Barista",   start_date:"2014/08/29 06:00:00 +0000",end_date:"2014/08/29 09:00:00 +0000"},
-{id:5, text:"Barista",start_date:"2014-08-29 11:00:00",end_date:"2014-08-29 16:00:00"},
-{id:6, text:"Manager", start_date:"2014-08-29 16:00:00",end_date:"2014-08-29 19:00:00"},
-];
-scheduler.parse("events", "json");//takes the name and format of the data source
-</script>
+  <body onload="init();showNotification()">
+    <div id="scheduler_here" class="dhx_cal_container" style='width:85%; height:600px; padding:3%; position:fixed;'>
+        <div class="dhx_cal_navline">
+            <div class="dhx_cal_prev_button">&nbsp;</div>
+            <div class="dhx_cal_next_button">&nbsp;</div>
+            <div class="dhx_cal_today_button"></div>
+            <div class="dhx_cal_date"></div>
+            <div class="dhx_cal_tab" name="day_tab" style="right:204px;"></div>
+            <div class="dhx_cal_tab" name="week_tab" style="right:140px;"></div>
+            <div class="dhx_cal_tab" name="month_tab" style="right:76px;"></div>
+        </div>
+        <div class="dhx_cal_header"></div>
+        <div class="dhx_cal_data"></div>
+    </div>
+    <script type="text/javascript" charset="utf-8">
+    scheduler.config.xml_date="%Y-%m-%d %H:%i:%s";
+    // scheduler.config.server_utc = true;
+    scheduler.init('scheduler_here', new Date(), "month");
+     var events = [
+    {id:1, text:"Meeting",   start_date:"2014-08-28 06:00:00 +0000",end_date:"2014/08/28 09:00:00 +0000"},
+    {id:2, text:"Conference",start_date:"2014-08-28 11:00:00",end_date:"2014-08-28 16:00:00"},
+    {id:3, text:"Interview", start_date:"2014-08-28 16:00:00",end_date:"2014-08-28 19:00:00"},
+    {id:4, text:"Barista",   start_date:"2014/08/29 06:00:00 +0000",end_date:"2014/08/29 09:00:00 +0000"},
+    {id:5, text:"Barista",start_date:"2014-08-29 11:00:00",end_date:"2014-08-29 16:00:00"},
+    {id:6, text:"Manager", start_date:"2014-08-29 16:00:00",end_date:"2014-08-29 19:00:00"},
+    ];
+    scheduler.parse("events", "json");//takes the name and format of the data source
+    </script>
+    <div class="calendar-menu pure-menu pure-menu-open">
+    <a class="pure-menu-heading">Calendar Options</a>
+    <ul>
+        <li><input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+    <label class="onoffswitch-label" for="myonoffswitch">
+        <span class="onoffswitch-inner"></span>
+        <span class="onoffswitch-switch"></span>
+    </ul>
+</div>
+<!-- <div class="toggle-menu pure-menu pure-menu-open">
+<div class="onoffswitch">
+    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+    <label class="onoffswitch-label" for="myonoffswitch">
+        <span class="onoffswitch-inner"></span>
+        <span class="onoffswitch-switch"></span>
+    </label>
+</div>
+</div> -->
+<script type="text/javascript" src="https://addthisevent.com/libs/1.5.8/ate.min.js"></script>
+<a href="http://example.com/link-to-your-event" title="Add to Calendar" class="addthisevent">
+    Add to Calendar
+    <span class="_start">10-05-2014 11:38:46</span>
+    <span class="_end">11-05-2014 11:38:46</span>
+    <span class="_zonecode">6</span>
+    <span class="_summary">Summary of the event</span>
+    <span class="_description">Description of the event</span>
+    <span class="_location">Location of the event</span>
+    <span class="_organizer">Organizer</span>
+    <span class="_organizer_email">Organizer e-mail</span>
+    <span class="_facebook_event">http://www.facebook.com/events/160427380695693</span>
+    <span class="_all_day_event">true</span>
+    <span class="_date_format">DD/MM/YYYY</span>
+</a>
+
   </body>
-  </div>
+</div>

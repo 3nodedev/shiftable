@@ -17,6 +17,15 @@
     text-align: center;
 }
 
+.login-splash{
+    width: 80%;
+    height: 50%;
+    margin: auto;
+    position: absolute;
+    top: 25em; left: 0; bottom: 0; right: 0;
+    text-align: center;
+}
+
 #password, #employee_number{
     display: inline;
 }
@@ -51,6 +60,12 @@ video#bgvid {
     margin: 0 auto;
 }
 
+#whiteshiftlogo{
+    height: auto;
+    position: relative;
+    margin: 0 auto;
+}
+
 .pure-g{
     display: inline-block;
 }
@@ -65,28 +80,16 @@ video#bgvid {
     display: block;
 }
 
-/*#remember{
-    display: block;
-}*/
-
 .login-form{
 
-    width: ;
 }
 
-/*.login-form label {
+.login-form label {
     margin: 1em 0 0;
     font-weight: bold;
-    font-size: 100%;
+    font-size: 80%;
 }
 
-.login-form input[type] {
-    border: 2px solid #ddd;
-    box-shadow: none;
-    font-size: 50%;
-    width: 80%;
-    margin-bottom: 1em;
-}*/
 .starbucks-menu.pure-menu-open {
     background: #006341;
 }
@@ -99,8 +102,70 @@ video#bgvid {
     background-color: #EEE8DA;
 }
 
-.dhx_cal_data{
-    background-color: #EEE8DA;s
+.dhx_cal_header.dhx_cal_data{
+    opacity: 0;
 }
 
+.login{
+    border:none;
+    font-size: 40%;
+    line-height: 0em;
+    display: inline-block;
+    margin-top: 7em;
+}
 
+.onoffswitch {
+    position: relative; width: 90px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 20px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    -moz-transition: margin 0.3s ease-in 0s; -webkit-transition: margin 0.3s ease-in 0s;
+    -o-transition: margin 0.3s ease-in 0s; transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "ON";
+    padding-left: 10px;
+    background-color: #006341; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "OFF";
+    padding-right: 10px;
+    background-color: #EEEEEE; color: #999999;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 18px; margin: 6px;
+    background: #FFFFFF;
+    border: 2px solid #999999; border-radius: 20px;
+    position: absolute; top: 0; bottom: 0; right: 56px;
+    -moz-transition: all 0.3s ease-in 0s; -webkit-transition: all 0.3s ease-in 0s;
+    -o-transition: all 0.3s ease-in 0s; transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}
+
+.toggle-menu.pure-menu.pure-menu-open{
+    float: right;
+}
+
+.calendar-menu.pure-menu.pure-menu-open{
+    float:right;
+    width: 7em;
+}
