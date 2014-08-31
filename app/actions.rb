@@ -53,6 +53,16 @@ get '/employees/shiftable' do
 end
 
 post '/dropshift' do
+  dropshift = Shift.find params[:shift_id]
+  dropshift.employee_id = nil
+  dropshift.save
+  redirect '/employees/shiftable'
+end
+
+post '/grabshift' do
+  grabshift = Shift.find params[:shift_id]
+  grabshift.employee_id = session[:employee_id]
+  grabshift.save
   redirect '/employees/shiftable'
 end
 

@@ -20,6 +20,12 @@
       <div>
       <p><%= shift.start_date %></p>
       </div>
+      <div>
+        <form action="/grabshift" method="post">
+          <input type="hidden" name="shift_id" value="<%= shift.id %>" />
+          <input class="pure-button" type="submit" name="submit" value="Grab Shift" />
+        </form>
+      </div>
     <% end %>
   </div>
 </div>
