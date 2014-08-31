@@ -17,6 +17,15 @@
     text-align: center;
 }
 
+.login-splash{
+    width: 80%;
+    height: 50%;
+    margin: auto;
+    position: absolute;
+    top: 25em; left: 0; bottom: 0; right: 0;
+    text-align: center;
+}
+
 #password, #employee_number{
     display: inline;
 }
@@ -49,6 +58,13 @@ video#bgvid {
     top:1.75em;
     position: relative;
     margin: 0 auto;
+}
+
+#whiteshiftlogo{
+    height: auto;
+    position: relative;
+    margin: 0 auto;
+    max-width: 100%
 }
 
 .pure-g{
