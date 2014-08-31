@@ -164,3 +164,8 @@ video#bgvid {
 .toggle-menu.pure-menu.pure-menu-open{
     float: right;
 }
+
+.calendar-menu.pure-menu.pure-menu-open{
+    float:right;
+    width: 7em;
+}
