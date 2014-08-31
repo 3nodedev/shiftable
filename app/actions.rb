@@ -11,7 +11,7 @@ get '/' do
 end
 
 get '/employees' do
-  @shift_data = Shift.all
+  @shift_data = Shift.where(employee_id: [session[:employee_id], nil])
   @shift_data_json = @shift_data.to_json
   @shift_cal = @shift_data_json.gsub(/\"/, '\'')
   # binding.pry
@@ -66,19 +66,12 @@ post '/grabshift' do
   redirect '/employees/shiftable'
 end
 
-post '/employees/' do
-end
-
 get '/management' do
-  @shift_data = Shift.where(employee_id: [session[:employee_id], nil])
+  @shift_data = Shift.all
   @shift_data_json = @shift_data.to_json
   @shift_cal = @shift_data_json.gsub(/\"/, '\'')
   # binding.pry
   erb :'management/index'
-end
-
-get '/management/scheduling' do
-  erb :'management/scheduling'
 end
 
 get '/video' do
