@@ -18,7 +18,7 @@ class Shift < ActiveRecord::Base
 
   def calendar_color
     if self.employee.role == "barista"
-      @color = "red"
+      @color = "blue"
     else
       @color = "orange"
     end
