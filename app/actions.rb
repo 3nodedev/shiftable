@@ -37,7 +37,7 @@ post '/login' do
     redirect '/employees'
   else
     @login_error = true
-    erb :'/login/index'
+    erb :'/login/error'
   end
 end
 
