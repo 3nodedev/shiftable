@@ -1,6 +1,6 @@
 <div class="header">   
-  <div class="home-menu starbucks-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-heading">
-    <a href="http://www.starbucks.ca/"><img src="photos/Starbucks_logo.png" style='width:2.5%;' border="0" alt="Null"></a>
+  <div class="starbucks-menu home-menu pure-menu pure-menu-open pure-menu-horizontal pure-menu-fixed">
+    <a class="homelogo" href="http://www.starbucks.ca/"><img src="photos/Starbucks_logo.png" style='width:6.3%;' border="0" alt="Null"></a>
     <ul>
       <li class="pure-menu-selected"><a href="#">Profile</a></li>
       <li><a href="#">About Us</a></li>
@@ -12,7 +12,7 @@
 
 <div class="employee-style">
 
-  <div id="scheduler_here" class="dhx_cal_container pure-u-4-5" style='width:1024px; height:768px; padding:10px;'>
+  <div id="scheduler_here" class="dhx_cal_container pure-u-4-5" style='width:85%; height:600px; padding:3%;'>
     <div class="dhx_cal_navline">
       <div class="dhx_cal_prev_button">&nbsp;</div>
       <div class="dhx_cal_next_button">&nbsp;</div>
@@ -41,7 +41,40 @@
   </script>
 </div>
 
+<div class="calendar-menu pure-menu pure-menu-open pure-u-1-5">
+  <a class="pure-menu-heading">Calendar Options</a>
+  <ul>
+    <li><input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+      <label class="onoffswitch-label" for="myonoffswitch">
+        <span class="onoffswitch-inner"></span>
+        <span class="onoffswitch-switch"></span>
+      </label>
+    </li>
+  </ul>
+</div>
+
+
 <span class="toggle">
     <input type="checkbox">
     <label data-off="Me" data-on="Store"></label>
 </span>
+
+<div class="ical">
+  <script type="text/javascript" src="https://addthisevent.com/libs/1.5.8/ate.min.js"></script>
+  <a href="http://example.com/link-to-your-event" title="Add to Calendar" class="addthisevent">
+    Add to Calendar
+    <span class="_start">10-05-2014 11:38:46</span>
+    <span class="_end">11-05-2014 11:38:46</span>
+    <span class="_zonecode">6</span>
+    <span class="_summary">Summary of the event</span>
+    <span class="_description">Description of the event</span>
+    <span class="_location">Location of the event</span>
+    <span class="_organizer">Organizer</span>
+    <span class="_organizer_email">Organizer e-mail</span>
+    <span class="_facebook_event">http://www.facebook.com/events/160427380695693</span>
+    <span class="_all_day_event">true</span>
+    <span class="_date_format">DD/MM/YYYY</span>
+  </a>
+</div>
+
+
