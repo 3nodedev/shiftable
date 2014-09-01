@@ -96,7 +96,7 @@ video#bgvid {
     font-size: 80%;
 }
 
-.starbucks-menu.pure-menu-open {
+.starbucks-menu.pure-menu-open{
     background: #006341;
 }
 
@@ -106,7 +106,9 @@ video#bgvid {
 
 #scheduler_here{
     background-color: #EEE8DA;
-    margin-left: -17.9em;
+    display: inline-block;
+    float: left;
+    margin-top: 4.7%;
 }
 
 .dhx_cal_header.dhx_cal_data{
@@ -123,7 +125,7 @@ video#bgvid {
 
 /*ical button*/
 .ical{
-    margin-left: 55%;
+    margin-left: 70%;
 }
 
 /*calendar toggle button*/
@@ -178,16 +180,28 @@ video#bgvid {
 .toggle-menu.pure-menu.pure-menu-open{
     float: right;
     clear: both;
+    display: inline-block;
 }
 
 .calendar-menu.pure-menu.pure-menu-open{
     width: 11.9em;
-    float: right;
+    clear: left;
+    display: inline-block;
+    margin-top: 4%;
 }
 
 #myonoffswitch{
     width: 5em;
 }
+
+.ical{
+    width: 11.9em;
+}
+
+.homelogo{
+    float: left;
+}
+
 
 /*mgmt toggle button*/
 
