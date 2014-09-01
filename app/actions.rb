@@ -33,6 +33,7 @@ post '/login' do
     id = Employee.where(:employee_number => params['employee_number']).pluck(:id)[0]
     session[:employee_number] = params[:employee_number]
     session[:employee_id] = id
+    session[:employee_name] = Employee.find(id).first_name
     @login_error = false
     redirect '/employees'
   else
