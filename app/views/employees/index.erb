@@ -4,6 +4,9 @@
     <a class="homelogo" href="http://www.starbucks.ca/"><img src="photos/Starbucks_logo.png" style='width:6.3%;' border="0" alt="Null"></a>
     <ul>
       <li class="pure-menu-selected"><a href="#">Welcome <%= Employee.find(session[:employee_id]).first_name %></a></li>
+      <% if Employee.find(session[:employee_id]).role == 'manager' %>
+      <li><a href="/management">Management</a></li>
+      <% end %>
       <li><a href="#">Profile</a></li>
       <li><a href="/logout">Logout</a></li>
     </ul>
